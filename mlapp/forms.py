@@ -7,6 +7,7 @@ class InputForm(forms.ModelForm):
         for field in self.fields.values():
             field.widget.attrs["class"] = "form-control"
     # DBの内容のメタ情報を記載しています
+        
     class Meta:
         model = Customer
         exclude = ['id', 'result', 'proba', 'comment', 'registered_date']
